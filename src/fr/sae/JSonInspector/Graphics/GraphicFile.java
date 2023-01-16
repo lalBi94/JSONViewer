@@ -8,13 +8,14 @@ import fr.sae.JSonInspector.Storage.Value;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 import java.util.ArrayList;
 
 public class GraphicFile extends JPanel {
     private final GridBagConstraints gbc = new GridBagConstraints();
     private final JPanel alignementPanel = new JPanel();
     private final Frame frame;
-    private final ArrayList<Line> lines;
+    private final List<Line> lines;
     private boolean php = false;
     private Node firstNode;
 
@@ -29,7 +30,7 @@ public class GraphicFile extends JPanel {
         displayLines();
     }
 
-    public GraphicFile(Frame frame, ArrayList<Line> lines) {
+    public GraphicFile(Frame frame, List<Line> lines) {
         super();
         init();
         this.frame = frame;
@@ -262,7 +263,7 @@ public class GraphicFile extends JPanel {
      * @param line  la ligne sur laquelle afficher la valeur
      * @param value la valeur à afficher
      */
-    private void createValue(Line line, Value value) {
+    private void createValue(Line line, Value<?> value) {
         if (value.isNumber()) {
             line.add("" + value.getValue(), Parameters.NUMBER_COLOR);
         } else if (value.isString()) {
@@ -394,7 +395,7 @@ public class GraphicFile extends JPanel {
      *
      * @return la liste des lignes du fichier
      */
-    public ArrayList<Line> getLines() {
+    public List<Line> getLines() {
         return lines;
     }
 }

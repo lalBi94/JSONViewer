@@ -3,8 +3,10 @@ package fr.sae.JSonInspector;
 import fr.sae.JSonInspector.Exception.JsonSyntaxException;
 import fr.sae.JSonInspector.Graphics.Frame;
 import fr.sae.JSonInspector.Storage.Tree;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 

@@ -2,7 +2,6 @@ package fr.sae.JSonInspector.Storage;
 
 import fr.sae.JSonInspector.Exception.JsonSyntaxException;
 import fr.sae.JSonInspector.Settings.Parameters;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,9 +1,8 @@
 package fr.sae.JSonInspector.Graphics;
 
 import fr.sae.JSonInspector.Settings.Parameters;
-
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JLabel;
+import java.awt.Color;
 
 public class MyJLabel extends JLabel {
     /**

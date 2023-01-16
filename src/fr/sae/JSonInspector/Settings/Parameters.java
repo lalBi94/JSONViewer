@@ -1,6 +1,7 @@
 package fr.sae.JSonInspector.Settings;
 
-import java.awt.*;
+import java.awt.Font;
+import java.awt.Color;
 
 /**
  * Contient uniquement les paramètres de l'application

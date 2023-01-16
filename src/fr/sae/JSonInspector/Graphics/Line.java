@@ -1,8 +1,7 @@
 package fr.sae.JSonInspector.Graphics;
 
 import fr.sae.JSonInspector.Storage.Node;
-
-import java.awt.*;
+import java.awt.Color;
 
 /**
  * Représente une ligne dans l'IHM

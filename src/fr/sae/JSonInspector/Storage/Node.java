@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    private final List<Value> values = new ArrayList<>();
+    private final List<Value<?>> values = new ArrayList<>();
     private final String name;
     private final Type type;
 
@@ -82,7 +82,7 @@ public class Node {
      * @param index l'index de la valeur
      * @return la valeur trouvée
      */
-    public Value get(int index) {
+    public Value<?> get(int index) {
         return values.get(index);
     }
 

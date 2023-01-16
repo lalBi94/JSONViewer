@@ -1,9 +1,9 @@
 package fr.sae.JSonInspector.Graphics;
 
 import fr.sae.JSonInspector.Settings.Parameters;
-
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.FlowLayout;
 
 public class MyJPanel extends JPanel {
     /**

@@ -1,15 +1,18 @@
 # COMMANDES
 JAVA = java
 JAVAC = javac
-JAR = java -jar
+JAR = jar cvfe
+JAR_OPTIONS = -jar
+NOM_JAR = JSonInspector.jar
 JAVADOC = javadoc
-OPTIONSDOCS = -d docs -noqualifier all
+OPTIONSDOCS = -d docs -noqualifier all -Xdoclint:none
 JAVAC_OPTIONS = -d build -Xlint:unchecked
 EXT = .java
 
 # CHEMINS
 SRC = src/fr/sae/JSonInspector
 BUILD = build/fr/sae/JSonInspector
+PACKAGE = fr.sae.JSonInspector
 DOCS = docs
 CORE = Main
 
@@ -26,9 +29,8 @@ run:
 	make clean
 	mkdir build/ && mkdir docs/
 	${JAVAC} ${JAVAC_OPTIONS} ${SETTINGS} ${GRAPHICS} ${STORAGE} ${EXCEPTION} ${MAIN}
+	${JAR} ${NOM_JAR} ${PACKAGE}.Main -C build fr
 	make docs
-	${JAR} cvfe JSonInspector.jar fr.sae.JSonInspector.Main -C build fr
-	cd build && java fr.sae.JSonInspector.Main && cd ..
 
 clean:
 	rm -rf build && rm -rf docs
